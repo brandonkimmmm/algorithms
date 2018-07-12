@@ -1,0 +1,24 @@
+1. Time complexity is a function that estimates the time it takes for a program to execute. An algorithm's efficiency is calculated using time complexity.
+
+2.  Runtime is the physical time durations of an algorithm.
+
+3. It is calculated as a function of a variable n, where n is the input size and f(n) is the rate the algorithm grows as the input size grows.
+
+4.
+  a) Constant Growth Rate
+  b) Logarithmic Growth Rate
+  c) Linear Growth Rate
+  d) Log-Linear Growth Rate
+  e) Quadratic Growth Rate
+  f) Cubic Growth Rate
+  g) Exponential Growth Rate
+
+5. Linear Growth Rate - when attending to a table as a waiter, the number of orders you need to take grows linearly as the number of customers grow.
+
+6. n
+
+7. n^2
+
+8. 2^n
+
+9. The linear function would be the most efficient.
