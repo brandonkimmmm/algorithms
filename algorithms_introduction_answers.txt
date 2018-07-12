@@ -1,0 +1,34 @@
+1.
+  Making Coffee
+  SET waterBoiler to full
+  WHILE water is not boiling
+    CALL heatWater
+  END WHILE
+  CALL grindBeans
+  SET frenchPress to filledWithGrinds
+  CALL pourWater passing frenchPress
+  SET timer to threeMinutes
+  CALL pour passing coffee and SET to cup
+
+  Washing Dishes
+  SET dishwasher to empty
+  CALL loadWasher passing dirtyDishes
+  CALL runWasher and SET to cleanDishes
+  WHILE cleanDishes are wet
+    CALL dryDishes
+  END WHILE
+
+  Charging Phone
+  IF phone battery is not full
+    WHILE batteryNotFull
+      CHARGE phoneBattery
+    END WHILE
+  END IF
+
+2.
+  Google search engine: Google's search engine produces the most relevant results and has been the standard of search engines
+  Coca-Cola: Coca-Cola created an algorithm to produce their signature beverage that now is the most popular beverage in the world.
+  FedEx: FedEx created an algorithm that allowed overnight shipping which revolutionized the shipping business.
+
+3.
+  An efficient algorithm produces a desired outcome in a relatively short amount of time that is efficient. It doesn't have steps that are unnecessary or redundant and can be used repeatedly by anyone.
