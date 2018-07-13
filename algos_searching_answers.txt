@@ -1,0 +1,44 @@
+1. When a person is searching for a specific toy in a pile of toys.
+
+2. When you are looking for the 5th tallest person in an ordered line of tall people.
+
+3. 7 iterations
+
+4. 3 iterations
+
+5. A linear search because the items are unsorted.
+
+6. A binary search because the items are sorted.
+
+Programming Assignments
+
+1.
+  function dictionarySearch(dictionary, word) {
+    let low = 0;
+    let high = dictionary.length - 1;
+
+    while (low <= high) {
+      let mid = Math.floor((low + high) / 2);
+      if (dictionary[mid] > word) {
+        high = mid - 1;
+      } else if (dictionary[mid] < word) {
+        low = mid + 1;
+      } else {
+        return mid;
+      }
+    }
+
+    return 'Not Found';
+  }
+
+2.
+  function findGoldfish(fish, type) {
+    let result = 'Not Found';
+    for (let i = 0; i < fish.length; i++) {
+      if (fish[i].type === type) {
+        result = fish[i];
+      }
+    }
+
+    return result;
+  }
