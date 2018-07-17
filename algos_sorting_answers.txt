@@ -1,0 +1,69 @@
+1.
+  function bubbleSort(collection) {
+    REPEAT
+      SET swapped to false
+      FOR (let i = 0; i < collection.length - 1; i++)
+        IF collection[i] > collection[i + 1]
+          SET tmp to collection[i]
+          SET collection[i] to collection[i + 1]
+          SET collection[i + 1] to tmp
+          SET swapped to true
+        END IF
+      END FOR
+    UNTIL swapped is false
+
+    RETURN collection
+  }
+
+2.
+  function swap(items, firstIndex, secondIndex) {
+    SET temp = items[firstIndex]
+    SET items[firstIndex] to items[secondIndex]
+    SET items[secondIndex] to temp
+  }
+
+  function partition(items, left, right) {
+    SET pivot to items[Math.floor((right + left) / 2)]
+    SET i to left
+    SET j to right
+
+    WHILE i <= j
+      WHILE items[i] < pivot
+        INCREMENT i by 1
+      END WHILE
+      WHILE items[j] > pivot
+        DECREMENT j by 1
+      END WHILE
+      IF i <= j
+        CALL swap(items, i, j)
+        INCREMENT i by 1
+        DECREMENT j by 1
+      END IF
+    END WHILE
+
+    RETURN i
+  }
+
+  function quickSort(items, left, right) {
+    SET index to empty variable
+    IF items.length  > 1
+      CALL partition(items, left, right) and SET to index
+      IF left < index - 1
+        CALL quickSort(items, left, index - 1)
+      END IF
+      IF index , right
+        CALL quickSort(items, index, right)
+      END IF
+    END IF
+
+    return items
+  }
+
+3. Merge sort and quick sort time complexity is O(nlogn) because the algorithms half the data sets each time for each of n times. The halving of data represents an O(log n) growth rate while the reordering represents a linear growth. Other sorts like selection sort and bubble sort have O(n^2) or quadratic growth rates.
+
+4. A bucket sort is mainly useful when input is uniformly distributed over a range. It:
+
+    1. Sets up an array of initially empty 'buckets'
+    2. It goes over the original array, putting each object in its bucket
+    3. It sorts each non-empty bucket
+    4. It visits the buckets in order and puts all elements back into the original array.
